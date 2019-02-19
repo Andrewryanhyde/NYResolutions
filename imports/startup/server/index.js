@@ -6,7 +6,7 @@ type Query {
        hi: String
 }
 `;
-
+ 
 
 const resolvers  = {
        Query: {
