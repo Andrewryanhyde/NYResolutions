@@ -1,16 +1,14 @@
+import Resolutions from './resolutions';
+
+//Resolutions.insert({
+//      name: "Test es"
+//});
+
+
 export default {
        Query: {
               resolutions() {
-                     return [
-                            {
-                                   _id: "asdfasdfasdf",
-                                   name: "Get stuff done!"
-                            },
-                            {
-                                   _id: "afloogelhorn",
-                                   name: "Get stuff done!"
-                            }
-                     ];
+                     return Resolutions.find({}).fetch();
               }
        }
 };
