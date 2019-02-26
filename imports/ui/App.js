@@ -1,3 +1,4 @@
+
 import React from "react";
 import gql from "graphql-tag";
 import { graphql } from "react-apollo";
@@ -9,14 +10,15 @@ const App = ({ loading, resolutions }) => {
   if (loading) return null;
   return (
     <div>
-       <RegisterForm />
-       <LoginForm />
-       <ResolutionForm />
-       <ul>
+      <RegisterForm />
+      <LoginForm />
+      <ResolutionForm />
+      <button onClick={() => Meteor.logout()}>Logout</button>
+      <ul>
         {resolutions.map(resolution => (
           <li key={resolution._id}>{resolution.name}</li>
         ))}
-       </ul>
+      </ul>
     </div>
   );
 };
