@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { Accounts } from "meteor/accounts-base";
 

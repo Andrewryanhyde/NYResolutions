@@ -1,12 +1,12 @@
-# name 
-# createdAt 
+# name
+# createdAt
 # [todoId]
 
 type Resolution {
-       _id: String!
-       name: String! 
+  _id: String!
+  name: String!
 }
 
 type Mutation {
-       createResolution(name: String!): Resolution
+  createResolution(name: String!): Resolution
 }

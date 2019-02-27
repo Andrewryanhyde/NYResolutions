@@ -17,9 +17,9 @@ const authLink = new ApolloLink((operation, forward) => {
   const token = Accounts._storedLoginToken();
   operation.setContext(() => ({
     headers: {
-      "meteor-login-token": token,
+      "meteor-login-token": token
     }
-  }))
+  }));
   return forward(operation);
 });
 
