@@ -1,10 +1,20 @@
 import Resolutions from "./resolutions";
+import Goals from '../goals/goals';
+
 
 export default {
   Query: {
     resolutions(obj, args, { userId }) {
       return Resolutions.find({
         userId
+      }).fetch();
+    }
+  },
+
+  Resolution: {
+    goals: resolution => {
+      return Goals.find({
+        resolutionId: resolution._id
       }).fetch();
     }
   },
